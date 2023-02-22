@@ -146,14 +146,74 @@ inner join fabricante f on p.id_fabricante=f.id
 order by p.precio ASC limit 1;
 
 /*consulta 5*/
+select 
+  p.nombre, p.precio, f.nombre as fabricante
+from producto p 
+inner join fabricante f on p.id_fabricante=f.id
+order by p.precio DESC limit 1;
+
 /*consulta 6*/
+select 
+  p.nombre, p.precio, f.nombre as fabricante
+from producto p 
+inner join fabricante f on p.id_fabricante=f.id
+where f.nombre like '%Lenovo%';
+
 /*consulta 7*/
+select 
+  p.nombre, p.precio, f.nombre as fabricante
+from producto p 
+inner join fabricante f on p.id_fabricante=f.id
+where f.nombre like '%Crucial%' and p.precio > 200;
+
 /*consulta 8*/
+select 
+  p.nombre, p.precio, f.nombre as fabricante
+from producto p 
+inner join fabricante f on p.id_fabricante=f.id
+where 
+  f.nombre like '%Asus%' 
+  or f.nombre like '%Hewlett-Packard%' 
+  or f.nombre like '%Seagate%' ;
+
 /*consulta 9*/
+select 
+  p.nombre, p.precio, f.nombre as fabricante
+from producto p 
+inner join fabricante f on p.id_fabricante=f.id
+where 
+  f.nombre in ('Asus', 'Hewlett-Packard', 'Seagate');
+  
 /*consulta 10*/
+select 
+  p.nombre, p.precio, f.nombre as fabricante
+from producto p 
+inner join fabricante f on p.id_fabricante=f.id
+where 
+  f.nombre like '%e';
+
 /*consulta 11*/
+select 
+  p.nombre, p.precio, f.nombre as fabricante
+from producto p 
+inner join fabricante f on p.id_fabricante=f.id
+where 
+  f.nombre like '%w%';
+
 /*consulta 12*/
+select 
+  p.nombre, p.precio, f.nombre as fabricante
+from producto p 
+inner join fabricante f on p.id_fabricante=f.id
+where 
+  p.precio >= 180 
+  order by p.precio desc, p.nombre asc;
+
 /*consulta 13*/
+select 
+  p.id_fabricante, f.nombre
+from producto p 
+inner join fabricante f on p.id_fabricante=f.id;
 
 
 
