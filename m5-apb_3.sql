@@ -222,9 +222,23 @@ inner join fabricante f on p.id_fabricante=f.id;
 **************************************/
 
 /*consulta 1*/
-/*consulta 2*/
-/*consulta 3*/
+select 
+  f.nombre as fabricante, p.nombre, p.precio
+from producto p 
+right join fabricante f on p.id_fabricante=f.id;
 
+/*consulta 2*/
+select 
+  f.nombre as fabricante, p.nombre, p.precio
+from producto p 
+right join fabricante f on p.id_fabricante=f.id
+where p.nombre is null;
+
+/*consulta 3*/
+/*
+No, debido a que el id del fabricante no puede ser nulo y está definido como clave foranea.
+id_fabricante INT UNSIGNED NOT NULL, FOREIGN KEY (id_fabricante) REFERENCES fabricante(id)
+*/
 
 
 /*************************************
@@ -232,28 +246,167 @@ inner join fabricante f on p.id_fabricante=f.id;
 **************************************/
 
 /*consulta 1*/
+select count(*) from producto;
+
 /*consulta 2*/
+select count(*) from fabricante;
+
 /*consulta 3*/
+select count( distinct id_fabricante) from producto;
+
 /*consulta 4*/
+select avg(precio) from producto;
+
 /*consulta 5*/
+select min(precio) from producto;
+
 /*consulta 6*/
+select max(precio) from producto;
+
 /*consulta 7*/
+select nombre, precio from producto order by precio asc limit 1;
+
 /*consulta 8*/
+select nombre, precio from producto order by precio desc limit 1;
+
 /*consulta 9*/
+select sum(precio) from producto;
+
 /*consulta 10*/
+select 
+  count(*)
+from producto p 
+inner join fabricante f on p.id_fabricante=f.id
+where 
+  f.nombre like '%Asus%';
+
 /*consulta 11*/
+select 
+  avg(precio)
+from producto p 
+inner join fabricante f on p.id_fabricante=f.id
+where 
+  f.nombre like '%Asus%';
+
 /*consulta 12*/
+select 
+  min(precio)
+from producto p 
+inner join fabricante f on p.id_fabricante=f.id
+where 
+  f.nombre like '%Asus%';
+
 /*consulta 13*/
+select 
+  max(precio)
+from producto p 
+inner join fabricante f on p.id_fabricante=f.id
+where 
+  f.nombre like '%Asus%';
+
 /*consulta 14*/
+select 
+  sum(precio)
+from producto p 
+inner join fabricante f on p.id_fabricante=f.id
+where 
+  f.nombre like '%Asus%';
+
 /*consulta 15*/
+select 
+  min(precio), max(precio), avg(precio), count(precio)
+from producto p 
+inner join fabricante f on p.id_fabricante=f.id
+where 
+  f.nombre like '%Crucial%';
+
 /*consulta 16*/
+select 
+  f.nombre, count(p.nombre)
+from producto p 
+right join fabricante f on p.id_fabricante=f.id
+group by f.nombre;
+
 /*consulta 17*/
+select 
+  f.id, min(precio), max(precio), avg(precio)
+from producto p 
+right join fabricante f on p.id_fabricante=f.id
+group by f.id;
+
 /*consulta 18*/
+select 
+  f.id, min(precio), max(precio), avg(precio), count(precio)
+from producto p 
+right join fabricante f on p.id_fabricante=f.id
+group by f.id
+having avg(precio) > 200
+;
+
 /*consulta 19*/
+select 
+  f.id, f.nombre, min(precio), max(precio), avg(precio), count(precio)
+from producto p 
+right join fabricante f on p.id_fabricante=f.id
+group by f.id
+having avg(p.precio) > 200
+;
+
 /*consulta 20*/
+select 
+  count(precio)
+from producto
+where precio > 200
+;
+
 /*consulta 21*/
+select 
+  f.id, f.nombre, count(p.precio) as 'cantidad de productos'
+from producto p 
+right join fabricante f on p.id_fabricante=f.id
+where p.precio > 180
+group by f.id
+;
+
 /*consulta 22*/
+select 
+  f.id, avg(p.precio)
+from producto p 
+right join fabricante f on p.id_fabricante=f.id
+group by f.id
+;
+
 /*consulta 23*/
+select 
+  f.nombre, avg(p.precio)
+from producto p 
+right join fabricante f on p.id_fabricante=f.id
+group by f.id
+;
+
 /*consulta 24*/
+select 
+  f.nombre
+from producto p 
+right join fabricante f on p.id_fabricante=f.id
+group by f.id
+having avg(p.precio) > 150
+;
+
 /*consulta 25*/
+select 
+  f.nombre
+from producto p 
+right join fabricante f on p.id_fabricante=f.id
+group by f.id
+having count(p.precio) >= 2
+;
+
 /*consulta 26*/
+select 
+  f.nombre, count(p.precio)
+from producto p 
+right join fabricante f on p.id_fabricante=f.id
+where p.precio > 220
+group by f.id
+;
