@@ -1,0 +1,292 @@
+<html><head> \m<title>Schema Report for database: m5_abpro_sprint</title> 
+<style>
+        td,th {
+        text-align:left;
+        vertical-align:middle;
+        }
+        table {
+        border-collapse: collapse;
+        border: 1px solid;
+        }
+        caption, th, td {
+        padding: .2em .8em;
+        border: 1px solid #000000;
+        }
+        caption {
+        background: #D3D3D3;
+        font-weight: bold;
+        font-size: 1.1em;
+        }
+        th {
+        font-weight: bold;
+        background: #000000;
+        color: white;
+        }
+        td {
+        background: #FFFFFF;
+        }
+        </style>
+      </head>
+     <body>
+<h1>Schema Report for database: m5_abpro_sprint</h1> 
+<a id="home">Table List </a><br /><ul> 
+ <li><a href="#accidente">accidente </a></li> 
+<li><a href="#actividad">actividad </a></li> 
+<li><a href="#administrativo">administrativo </a></li> 
+<li><a href="#asesoria">asesoria </a></li> 
+<li><a href="#asistentes">asistentes </a></li> 
+<li><a href="#capacitacion">capacitacion </a></li> 
+<li><a href="#chequeo">chequeo </a></li> 
+<li><a href="#cliente">cliente </a></li> 
+<li><a href="#pago">pago </a></li> 
+<li><a href="#profesional">profesional </a></li> 
+<li><a href="#usuario">usuario </a></li> 
+<li><a href="#visita">visita </a></li> 
+<li><a href="#visita_chequeo">visita_chequeo </a></li> 
+</ul> 
+<a id="accidente"></a><table style="width:100%"><caption>Table: accidente </caption> 
+<tr><td>Table Comments</td><td colspan="6"></td></tr> 
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Not Null</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+ <tr><td>accidenteid</td><td>BIGINT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr> 
+<tr><td>accifecha</td><td>DATE</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>accihora</td><td>DATE</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>accilugar</td><td>VARCHAR(50)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr> 
+<tr><td>acciorigen</td><td>VARCHAR(100)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>acciconsecuencias</td><td>VARCHAR(100)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>cliente_rutcliente</td><td>INT</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr> 
+</table><a href="#home">Table List </a></br> 
+<a id="actividad"></a><table style="width:100%"><caption>Table: actividad </caption> 
+<tr><td>Table Comments</td><td colspan="6"></td></tr> 
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Not Null</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+ <tr><td>idactividad</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr> 
+<tr><td>titulo</td><td>VARCHAR(120)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr> 
+<tr><td>descripcion</td><td>VARCHAR(250)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr> 
+<tr><td>plazo</td><td>INT</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr> 
+<tr><td>asesoria_idasesoria</td><td>INT</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr> 
+</table><a href="#home">Table List </a></br> 
+<a id="administrativo"></a><table style="width:100%"><caption>Table: administrativo </caption> 
+<tr><td>Table Comments</td><td colspan="6"></td></tr> 
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Not Null</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+ <tr><td>rut_administrativo</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr> 
+<tr><td>nombre</td><td>VARCHAR(20)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr> 
+<tr><td>apellido</td><td>VARCHAR(20)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>email</td><td>VARCHAR(20)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>area</td><td>VARCHAR(20)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>usuario_idusuario</td><td>INT</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr> 
+</table><a href="#home">Table List </a></br> 
+<a id="asesoria"></a><table style="width:100%"><caption>Table: asesoria </caption> 
+<tr><td>Table Comments</td><td colspan="6"></td></tr> 
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Not Null</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+ <tr><td>idasesoria</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr> 
+<tr><td>fecha_realizacion</td><td>DATE</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr> 
+<tr><td>motivo</td><td>VARCHAR(120)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr> 
+<tr><td>profesional_rut_profesional</td><td>INT</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr> 
+</table><a href="#home">Table List </a></br> 
+<a id="asistentes"></a><table style="width:100%"><caption>Table: asistentes </caption> 
+<tr><td>Table Comments</td><td colspan="6"></td></tr> 
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Not Null</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+ <tr><td>idasistente</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr> 
+<tr><td>asistnombrecompleto</td><td>VARCHAR(100)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr> 
+<tr><td>asistedad</td><td>INT</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr> 
+<tr><td>capacitacion_idcapacitacion</td><td>INT</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr> 
+<tr><td>asistcorreo</td><td>VARCHAR(70)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>asisttelefono</td><td>VARCHAR(20)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+</table><a href="#home">Table List </a></br> 
+<a id="capacitacion"></a><table style="width:100%"><caption>Table: capacitacion </caption> 
+<tr><td>Table Comments</td><td colspan="6"></td></tr> 
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Not Null</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+ <tr><td>idcapacitacion</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr> 
+<tr><td>capfecha</td><td>DATE</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>caphora</td><td>DATE</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>caplugar</td><td>VARCHAR(50)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr> 
+<tr><td>capduracion</td><td>INT</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr> 
+<tr><td>cantidadasistentes</td><td>INT</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>cliente_rutcliente</td><td>INT</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr> 
+</table><a href="#home">Table List </a></br> 
+<a id="chequeo"></a><table style="width:100%"><caption>Table: chequeo </caption> 
+<tr><td>Table Comments</td><td colspan="6"></td></tr> 
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Not Null</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+ <tr><td>idcheckeo</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr> 
+<tr><td>nombre</td><td>VARCHAR(20)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr> 
+</table><a href="#home">Table List </a></br> 
+<a id="cliente"></a><table style="width:100%"><caption>Table: cliente </caption> 
+<tr><td>Table Comments</td><td colspan="6"></td></tr> 
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Not Null</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+ <tr><td>rutcliente</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr> 
+<tr><td>clinombres</td><td>VARCHAR(30)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr> 
+<tr><td>cliapellidos</td><td>VARCHAR(30)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr> 
+<tr><td>clitelefono</td><td>INT</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr> 
+<tr><td>cliafp</td><td>VARCHAR(30)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>clisistemasalud</td><td>SMALLINT</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>clidireccion</td><td>VARCHAR(70)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>clicomuna</td><td>VARCHAR(50)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>cliedad</td><td>MEDIUMINT</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr> 
+</table><a href="#home">Table List </a></br> 
+<a id="pago"></a><table style="width:100%"><caption>Table: pago </caption> 
+<tr><td>Table Comments</td><td colspan="6"></td></tr> 
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Not Null</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+ <tr><td>idpago</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr> 
+<tr><td>fecha</td><td>DATE</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr> 
+<tr><td>monto</td><td>INT</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr> 
+<tr><td>mes</td><td>DATE</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr> 
+<tr><td>anio</td><td>DATE</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr> 
+<tr><td>cliente_rutcliente</td><td>INT</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr> 
+</table><a href="#home">Table List </a></br> 
+<a id="profesional"></a><table style="width:100%"><caption>Table: profesional </caption> 
+<tr><td>Table Comments</td><td colspan="6"></td></tr> 
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Not Null</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+ <tr><td>rut_profesional</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr> 
+<tr><td>nombre</td><td>VARCHAR(20)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr> 
+<tr><td>apellido</td><td>VARCHAR(20)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>telefono</td><td>VARCHAR(20)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>titulo</td><td>VARCHAR(20)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>proyecto</td><td>VARCHAR(20)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>usuario_idusuario</td><td>INT</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr> 
+</table><a href="#home">Table List </a></br> 
+<a id="usuario"></a><table style="width:100%"><caption>Table: usuario </caption> 
+<tr><td>Table Comments</td><td colspan="6"></td></tr> 
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Not Null</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+ <tr><td>idusuario</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr> 
+<tr><td>nombre</td><td>VARCHAR(20)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr> 
+<tr><td>apellido</td><td>VARCHAR(20)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>fecha_nacimiento</td><td>DATE</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>rut</td><td>VARCHAR(20)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr> 
+<tr><td>cliente_rutcliente</td><td>INT</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr> 
+</table><a href="#home">Table List </a></br> 
+<a id="visita"></a><table style="width:100%"><caption>Table: visita </caption> 
+<tr><td>Table Comments</td><td colspan="6"></td></tr> 
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Not Null</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+ <tr><td>idvisita</td><td>BIGINT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr> 
+<tr><td>visfecha</td><td>DATE</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr> 
+<tr><td>vishora</td><td>DATE</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>vislugar</td><td>VARCHAR(50)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr> 
+<tr><td>viscomentarios</td><td>VARCHAR(250)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr> 
+<tr><td>cliente_rutcliente</td><td>INT</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr> 
+</table><a href="#home">Table List </a></br> 
+<a id="visita_chequeo"></a><table style="width:100%"><caption>Table: visita_chequeo </caption> 
+<tr><td>Table Comments</td><td colspan="6"></td></tr> 
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Not Null</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+ <tr><td>id_visita_chequeo</td><td>BIGINT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr> 
+<tr><td>iscomplete</td><td>TINYINT(1)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr> 
+<tr><td>observaciones</td><td>VARCHAR(500)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr> 
+<tr><td>chequeo_idcheckeo</td><td>INT</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr> 
+<tr><td>visita_idvisita</td><td>BIGINT</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr> 
+</table><a href="#home">Table List </a></br> 
+</body></html> 

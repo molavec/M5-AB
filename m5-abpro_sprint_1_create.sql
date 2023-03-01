@@ -193,8 +193,8 @@ CREATE TABLE pago (
   idpago INT PRIMARY KEY NOT NULL,
   fecha date NOT NULL,
   monto INT NOT NULL,
-  mes date NOT NULL,
-  anio date NOT NULL,
+  mes int NOT NULL,
+  anio int NOT NULL,
   cliente_rutcliente INT NOT NULL,
   FOREIGN KEY (cliente_rutcliente) REFERENCES cliente(rutcliente)
 );
@@ -219,17 +219,4 @@ CREATE TABLE actividad (
 );
 
 
-/* SPRINT - PARTE 3: Llenado de datos */
 
-
-
-
-/* SPRINT - PARTE 4: Consultas */
-
-
-/* consulta 1 */
-
-/* consulta 2 */
-
-
-/* consulta 3 */
